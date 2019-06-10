@@ -5,6 +5,7 @@
 	<title>Portfolio</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 	<link rel="stylesheet" href="style.css">
 	<!-- Fonts -->
@@ -13,77 +14,94 @@
 </head>
 <body>
 	<div class="ui main container">
-		<img class="ui centered medium circular image" src="images/icon_test.png" alt="my-portrait">
-		<h1 id="name" class="ui huge center aligned header">Dawn Nyan</h1>
+		<!-- Portrait -->
+		<img class="ui centered medium circular image" src="images/portrait.png" alt="my-portrait">
+		<h1 id="name" class="ui huge center aligned header">Niall Brennan</h1>
+
+		<!-- Logos -->
+		<div id="logos">
+			<div class="ui center aligned grid">
+				<button id="github" class="circular ui icon black button">
+			  		<i class="big github square icon"></i>
+				</button>
+				<button id="linkedin" class="circular ui icon blue button">
+			  		<i class="big linkedin icon"></i>
+				</button>
+			</div>
+		</div>
+		
 		<div class="ui divider"></div>
 
+		<!-- About -->
 		<h2 id="title" class="ui large left aligned header">About Me</h2>
 		<p id="about">
-			Hi! I'm a Computer Science and Multimedia graduate seeking to provide my skills and knowledge to the world of software developement and design. My interests typically involving working with JavaScript, Python, or Java to produce front-end solutions, software prototypes, and data displays through APIs. UI/UX is also an important aspect to me. Other hobbies of mine include digital art, 3D modelling, playing piano, and video games!
+			Hi! I'm a Computer Science and Multimedia graduate seeking to provide my skills and knowledge to the world of software development and design. My interests typically involving working with JavaScript, Python, or Java to produce front-end solutions, software prototypes, tools, and data displays through APIs. UI/UX is an important aspect of development to me. Other hobbies of mine include digital art, 3D modelling, playing piano, and video games!
 		</p>
 		
+		<!-- Projects -->
 		<h2 id="title" class="ui large left aligned header">My Projects</h2>
-		<div class="ui centered cards">
-		  	<div class="card">
-		  		<div class="image">
-			    	<img src="images/corkapp.png" alt="cork-app-img">
-			  	</div>
-		    	<div class="content">
-		      		<div class="header">Cork Live Transport</div>
-		      		<div class="meta">Mobile App</div>
-		      		<div class="description">
-		        		Developed using open source data and frameworks to deliver the availability of car parks and bicycle stations to users.
-		     		 </div>
-		    	</div>
-		    	<div class="extra content">
-		    		<i class="github icon"></i>
-			    	<a class="item" href="https://github.com/dawnithan/CorkParkingBikes">View on GitHub</a>
-			  	</div>
-		  	</div>
-		  	<div class="card">
-		  		<div class="image">
-			    	<img src="images/bcsmapp.png" alt="ballyfermot-app-img">
-			  	</div>
-		    	<div class="content">
-		      		<div class="header">Ballyfermot Community Services Map</div>
-		      		<div class="meta">Mobile App</div>
-		      		<div class="description">
-		        		A community project spearheaded by secondary school students using data collected by them to celebrate 70 years of Ballyfermot and the services it has to offer.
-		     		 </div>
-		    	</div>
-		    	<div class="extra content">
-		    		<i class="github icon"></i>
-			    	<a class="item" href="https://github.com/dawnithan/TYOpenData">View on GitHub</a>
-			  	</div>
-		  	</div>
-		  	<div class="card">
-		  		<div class="image">
-			    	<img src="images/java_scraper.png" alt="scraper-img">
-			  	</div>
-		    	<div class="content">
-		      		<div class="header">Web & Hyperlink Retreiver</div>
-		      		<div class="meta">Java</div>
-		      		<div class="description">
-		        		placeholder lol
-		     		 </div>
-		    	</div>
-		    	<div class="extra content">
-		    		<i class="github icon"></i>
-			    	<a class="item" href="https://github.com/dawnithan/CS402-Assignments/blob/master/CS402%20Assignment%20Q4/src/assignment/HTTPClient.java">View on GitHub</a>
-			  	</div>
-		  	</div>
+		<div class="ui items">
+			<h2 id="title" class="ui medium left aligned header">Mobile Applications</h2>
+			<div class="item">
+				<!-- 
+				<div class="ui tiny image">
+					<img src="images/cork_logo.png">
+					<img src="images/bcsm_logo.png">
+				</div>
+				-->
+				<div class="middle aligned content">
+					<p id="about">
+						As part of <a href="http://dashboards.maynoothuniversity.ie">Building City Dashboards</a>, I created and published two mobile applications which used free and open-source software and libraries to make practical use of open data. <a href="https://github.com/dawnithan/CorkParkingBikes"><i class="github icon"></i>Cork Live Transport</a> used information regarding the car parks and bicycle stations in Cork City to show their availabilty to the public. <a href="https://github.com/dawnithan/TYOpenData"><i class="github icon"></i>Ballyfermot Community Services Map</a> used data gathered by students of St. Dominics Secondary School in Ballyfermot to show the location, website, and contact details of various different services within Ballyfermot, as a 70th year anniversary celebration. 
+					</p>
+				</div>
+			</div>
+			<h2 id="title" class="ui medium left aligned header">Web APIs</h2>
+			<div class="item">
+				<div class="middle aligned content">
+					<p id="about">
+						I've used the Twitter API to create a <a href="https://github.com/dawnithan/Dawnbot"><i class="github icon"></i>Discord bot </a>that will take in a tweet and output the images within it that aren't shown in the Discord tweet embed. The purpose of making this tool was to circumvent the lack of Discord showing all of the tweet's images, and was a fun journey through making a bot and using the Twitter API. Additionally, I've also made a <a href="https://github.com/dawnithan/CS402-Assignments/tree/master/Assignment%205%20-%20Web"><i class="github icon"></i>train timetable</a> which connects to the Irishrail API and returns details for a few select stations, as proof of concept.
+					</p>
+				</div>
+			</div>
+			<h2 id="title" class="ui medium left aligned header">Creative Things</h2>
+			<div class="item">
+				<div class="middle aligned content">
+					<p id="about">
+						Other things I've worked on include a <a href="https://github.com/dawnithan/Island-Generator"><i class="github icon"></i>random island generator in p5.js</a>, using perlin noise. Aside from programming, I'm also fond of 3D modelling. Here are some examples!
+					</p>
+				</div>
+			</div>
+			<div id="blender_images" class="ui center aligned grid">
+				<div class="ui large image">
+					<img src="images/trees.png">
+				</div>
+				<div class="ui large image">
+					<img src="images/computer_stream.png">
+				</div>
+			</div>
 		</div>
+
+		<!-- Contact -->
 		<h2 id="title" class="ui large left aligned header">Contact Me</h2>
 		<p id="about">
-			placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text 
+			If you are interested in having a chat, then drop me a line!
+			<div class="ui center aligned grid">
+				<button id="contact_button" class="ui massive purple button">
+					<i class="paper plane icon"></i>
+					Send an e-mail
+				</button>
+			</div>
 		</p>
 		<br>
 	</div>
+
+	<!-- Footer  -->
 	<div class="ui inverted vertical footer segment">
 		<div class="ui text container">
-			<p id="copyright">© 2019 Dawn Nyan</p>
+			<p id="copyright">© 2019 Niall Brennan</p>
 		</div>
     </div>
+
   </div>
 </div>
 </body>

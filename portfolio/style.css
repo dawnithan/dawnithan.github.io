@@ -1,9 +1,9 @@
 body {
 	/* background: #2b2b2b; */
-	background: #f2f2f2;
+	background: #F2E1F2;
 	/* background: url(computer_stream.png); */
 	/* background: #aa99ff; */
-	padding-top: 5%;
+	padding-top: 1%;
 }
 
 #title {
@@ -22,6 +22,15 @@ body {
 }
 
 #copyright {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Comfortaa', cursive;
 	text-align: center;
+}
+
+#logos {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#blender_images {
+	padding: 1%;
 }
